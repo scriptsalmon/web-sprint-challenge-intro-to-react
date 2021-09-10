@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function CharacterDetails(props) {
-    const { info } = props;
+    const { info, closeDetails } = props;
 
     return (
-        <div>
+        <div className="CharacterDetails">
             <h3>Details for {info.name}:</h3>
             <div>
                 <p>Birthdate: {info.birthdate}</p>
@@ -13,6 +13,7 @@ export default function CharacterDetails(props) {
                 <p>Hair: {info.hair_color}</p>
                 <p>Skin: {info.skin_color}</p>
             </div>
+            <button onClick={() => closeDetails()}>close</button>
         </div>
     )
 }
