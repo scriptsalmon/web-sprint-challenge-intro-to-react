@@ -3,11 +3,13 @@ import './App.css';
 import axios from 'axios';
 
 import Character from './components/Character';
+import CharacterDetails from './components/CharacterDetails';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
   const [data, setData] = useState([]);
+
 
 
   useEffect(() => {
