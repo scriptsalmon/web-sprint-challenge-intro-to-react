@@ -3,14 +3,22 @@ import './App.css';
 import axios from 'axios';
 
 import Character from './components/Character';
-import CharacterDetails from './components/CharacterDetails';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
   const [data, setData] = useState([]);
+  const [charName, setCharName] = useState(null);
 
 
+  const openDetails = (name) => {
+
+    setCharName(name);
+  }
+
+  const closeDetails = () => {
+    setCharName(null);
+  }
 
   useEffect(() => {
     axios.get('https://swapi.dev/api/people/')
@@ -37,7 +45,11 @@ const App = () => {
         <Character 
           key={char.id} 
           info={char} 
-          component={Character} />
+          component={Character} 
+          openDetails={openDetails}
+          closeDetails={closeDetails}
+          charName={charName}
+          />
           )})}
     </div>
   );
