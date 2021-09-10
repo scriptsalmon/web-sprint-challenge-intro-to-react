@@ -40,7 +40,7 @@ const StyledCharacter = Style.div`
         padding:1%;
         border:1px solid black;
         border-radius:10px;
-        opacity:0.8;
+        opacity:0.9;
 
         color: ${a => a.theme.primaryColor};
 
@@ -68,6 +68,7 @@ const StyledCharacter = Style.div`
 export default function Character (props) {
     const { info, openDetails, closeDetails, charName } = props;
 
+
     return (
         <StyledCharacter>
             <div className="Character">
@@ -75,11 +76,7 @@ export default function Character (props) {
                 <button onClick={() => {openDetails(info.name)}}>open</button>
             </div>
             {
-                charName && <CharacterDetails 
-                                info={info} 
-                                component={CharacterDetails} 
-                                closeDetails={closeDetails}
-                                />
+                charName && <CharacterDetails info={info} component={CharacterDetails} closeDetails={closeDetails} />
             }
         </StyledCharacter>
     )

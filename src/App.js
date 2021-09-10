@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 
 import Character from './components/Character';
+import CharacterDetails from './components/CharacterDetails';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -20,7 +21,6 @@ const App = () => {
   useEffect(() => {
     axios.get('https://swapi.dev/api/people/')
       .then(res => {
-        console.log(res.data);
         setData(res.data);
       })
       .catch(err => {
@@ -44,6 +44,10 @@ const App = () => {
           charName={charName}
           />
           )})}
+          {/* <button onClick={() => {openDetails(data.name)}}>open</button>
+            {
+              charName && <CharacterDetails info={data} component={CharacterDetails} closeDetails={closeDetails} />
+            } */}
     </div>
   );
 }

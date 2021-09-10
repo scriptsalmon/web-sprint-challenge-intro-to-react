@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+// import axios from 'axios';
 
 export default function CharacterDetails(props) {
     const { info, closeDetails } = props;
+    // const [details, setDetails] = useState();
+
+
+    // useEffect(() => {
+    //     axios.get('https://swapi.dev/api/people/')
+    //       .then(res => {
+    //         console.log(res.data);
+    //         setDetails(res.data);
+    //       })
+    //       .catch(err => {
+    //         const errMsg = document.createElement('p');
+    //         document.body.appendChild(errMsg);
+    //         errMsg.textContent = err;
+    //       })
+    //   }, [])
+
 
     return (
         <div className="CharacterDetails">
