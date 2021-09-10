@@ -82,8 +82,16 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
-
+  React JS is a library we can use to develop user interface and components. What react solves is the need for us to tediously create elements using js and instead instantiate them using JSX. Earlier in the week we had to create each element from scratch using document.createElement, or queryselect them from the document. It was useful information because it allowed me to see what jsx is doing behind the scenes. Another problem React solves is bloating of data. Instead of a page having to load all of its contents on startup, we are able to reveal parts of what we want to show the user when we deconstruct a webpage into usable component parts. 
 
 1. Describe component state.
+
+  Component state is a way to store data in a function, and used inside react. We can update this data within react using the useState hook. 
+
 1. Describe props.
+
+  Props are data passed from parent to child components. They are a parameter that stands for data we can pass via prop drilling. 
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+  Side effects are happenings that occur outside of our components. Theyre anything that affects something outside the scope of the function being executed. 
